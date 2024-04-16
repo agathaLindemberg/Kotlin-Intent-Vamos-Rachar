@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Constraint Layout</string>
+    <string name="valor_da_conta">Valor da Conta</string>
+    <string name="falar">Falar</string>
+    <string name="n_mero_de_pessoas">Número de Pessoas</string>
+    <string name="compartilhar">Compartilhar</string>
+</resources>
