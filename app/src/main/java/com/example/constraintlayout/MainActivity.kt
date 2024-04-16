@@ -7,8 +7,8 @@ import android.speech.tts.TextToSpeech
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private lateinit var edtNumeroPessoas: EditText
     private lateinit var edtValorConta: EditText
     private lateinit var txtResultado: TextView
-    private lateinit var btCompartilhar: Button
-    private lateinit var btnFalar: Button
+    private lateinit var btnCompartilhar: ImageButton
+    private lateinit var btnFalar: ImageButton
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         edtNumeroPessoas = findViewById(R.id.edtNumeroPessoas)
         edtValorConta = findViewById(R.id.edtValorConta)
         txtResultado = findViewById(R.id.txtResultado)
-        btCompartilhar = findViewById(R.id.btnCompartilhar)
+        btnCompartilhar = findViewById(R.id.btnCompartilhar)
         btnFalar = findViewById(R.id.btnFalar)
 
         // Adiciona ouvinte de texto para detectar mudanças nas EditTexts
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             }
         }
 
-        btCompartilhar.setOnClickListener {
+        btnCompartilhar.setOnClickListener {
             try {
                 val valorConta = edtValorConta.text.toString()
                 val numPessoas = edtNumeroPessoas.text.toString()
